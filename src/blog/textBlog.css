@@ -1,0 +1,74 @@
+article{
+    background-color: white;
+    margin: 10px 20px;
+
+    display: grid;
+    justify-content: center;
+}
+
+article h1{
+    font-size: 35px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+article figure{
+    width: 60%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+article figure .img-artikel{
+    background-color: black;
+    color: white;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article figure figcaption{
+    color: gray;
+}
+
+article p{
+    font-size: 15px;
+    margin: 5px 50px;
+}
+
+.button{
+    background-color: green;
+    color: white;
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: 1px inset white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.button:hover{
+    background-color: white;
+    color: green;
+    border: 1px outset white;
+}
+
+.back{
+    position: absolute;
+    top: 85px;
+    left: 20px;
+}
+
+.next{
+    position: absolute;
+    top: 85px;
+    right: 20px;
+}

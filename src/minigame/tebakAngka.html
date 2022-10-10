@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARO</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="minigameStyle.css" />
+  </head>
+  <body>
+    <header>
+      <h1>ARO</h1>
+      <nav>
+        <a href="../index.html">HOME</a>
+        <a href="../about.html">ABOUT ME</a>
+        <a href="../project.html">MY PROJECT</a>
+        <a href="../contact.html">CONTACT US</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container-minigame">
+        <div class="logo-minigame">MINI GAME</div>
+        <div class="nav-minigame">
+          <a href="minigame.html">GUNTING KERTAS BATU</a>
+          <a href="lamp.html">Lamp</a>
+          <a class="aktif" href="tebakAngka.html">Tebak Angka</a>
+          <a href="newGame.html">New Game</a>
+          <a href="#">Unknown</a>
+        </div>
+        <div class="tempat-main">
+          <div class="container-tebak-angka">
+            <h2>TEBAK ANGKA</h2>
+            <div class="munculAngka">MASUKAN ANGKA 1 - 10</div>
+            <div class="hp-player">
+                <h2>NYAWA</h2>
+                <div class="hp-1"></div>
+                <div class="hp-2"></div>
+                <div class="hp-3"></div>
+            </div>
+            <div class="kotak-tebak"><input type="number" placeholder="Isi disini..."/></div>
+            <div class="mulai-tebak-angka" onclick="getAngkaTebakan()"><p>TEBAK</p></div>
+            <div class="score-tebak-angka">
+              <h2>Score</h2>
+              <p>Menang = <span></span></p>
+              <p>Kalah = </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <h3>copyright by aro</h3>
+    </footer>
+
+    <script src="minigame.js"></script>
+  </body>
+</html>

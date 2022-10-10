@@ -1,0 +1,486 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* border: solid 2px black; */
+  font-family: monospace;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+/* Header Css */
+header {
+  background-color: rgb(82, 82, 219);
+  color: white;
+  padding: 20px 10px 0px 10px;
+  display: grid;
+  grid-area: header;
+  grid-template-columns: 0.6fr 0.4fr;
+  grid-template-rows: 1.5fr;
+}
+
+header h1 {
+  padding-left: 10px;
+  display: inline-block;
+  font-weight: 400px;
+  letter-spacing: 5px;
+}
+
+header nav a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+  grid-template-rows: 55px;
+  column-gap: 3px;
+}
+
+header nav a:hover {
+  color: rgb(82, 82, 219);
+  background-color: rgb(204, 204, 204);
+  font-size: 17px;
+}
+
+header img {
+  display: none;
+}
+
+header .menu {
+  display: none;
+}
+
+.aktif {
+  color: rgb(82, 82, 219);
+  background-color: rgb(204, 204, 204);
+}
+
+/* Main Css */
+
+main {
+  background-color: rgb(204, 204, 204);
+  padding: 10px;
+  grid-area: main;
+}
+
+.home {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 10px;
+}
+
+/* Main - side-left css */
+.conten {
+  background-color: rgb(82, 82, 219);
+  color: white;
+}
+
+.conten .conten-box-iklan {
+  width: 100%;
+  height: 400px;
+  background-color: black;
+  cursor: pointer;
+}
+
+.conten .penjelasan {
+  padding: 10px;
+}
+
+.conten .penjelasan h2 {
+  margin: 10px 0;
+}
+
+/* Main - sidebar css */
+
+sidebar {
+  background-color: rgb(82, 82, 219);
+  text-align: center;
+  padding: 10px 5px;
+  box-sizing: border-box;
+}
+
+sidebar .recomended-box-iklan {
+  background-color: rgb(61, 61, 255);
+}
+
+sidebar .recomended h2 {
+  padding: 10px 0px;
+}
+
+sidebar .recomended .container-recomended-box-iklan {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 150px);
+  grid-template-rows: 1fr;
+  grid-gap: 10px;
+}
+
+sidebar .recomended .recomended-box-iklan a {
+  text-decoration: none;
+  color: rgb(201, 201, 201);
+  display: block;
+  padding: 0 5px 5px 5px;
+  font-size: 20px;
+}
+
+sidebar .recomended .container-recomended-box-iklan .img-iklan {
+  width: 100px;
+  height: 50px;
+  background-color: rgb(224, 203, 203);
+  margin: 5px auto;
+  cursor: pointer;
+}
+
+sidebar
+  .recomended
+  .container-recomended-box-iklan
+  .recomended-box-iklan:hover {
+  background-color: rgb(122, 122, 122);
+}
+
+sidebar .recomended .container-recomended-box-iklan .recomended-box-iklan {
+  list-style: none;
+  border: 1px solid rgba(44, 44, 44, 0.5);
+  box-shadow: 2px 2px 5px rgba(44, 44, 44, 0.5);
+}
+
+/* About Css */
+
+.box-biodata {
+  background-color: rgb(82, 82, 219);
+  color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 100px auto;
+  width: 80%;
+  height: 400px;
+
+  animation: open-page-biodata 1s;
+}
+
+@keyframes open-page-biodata {
+  0% {
+    height: 0px;
+    width: 0px;
+  }
+  50% {
+    width: 80%;
+    height: 0px;
+  }
+  100% {
+    width: 80%;
+    height: 400px;
+  }
+}
+
+.box-biodata-img {
+  width: 150px;
+  height: 150px;
+  background-color: rgb(82, 82, 82);
+  border-radius: 50%;
+  transition: 0.8s;
+  margin: auto;
+
+  animation: blur 1s;
+
+  position: relative;
+  bottom: 50px;
+}
+
+.box-biodata-text {
+  padding: 10px;
+}
+
+.box-biodata-text h2 {
+  text-align: center;
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+
+.box-biodata-text p {
+  font-size: 20px;
+}
+
+.box-biodata-img:hover {
+  transform: scale(2) rotate(90deg);
+  border-radius: 0;
+}
+
+/* contact Css */
+.container-sosmed {
+  justify-content: center;
+  align-content: center;
+  display: grid;
+  column-gap: 20px;
+  row-gap: 20px;
+  grid-template-columns: repeat(1, 100px);
+  grid-template-rows: repeat(4, 100px);
+  grid-template-areas:
+    "satu"
+    "dua"
+    "tiga"
+    "empat";
+}
+
+div.satu {
+  grid-area: satu;
+}
+
+div.dua {
+  grid-area: dua;
+}
+
+div.tiga {
+  grid-area: tiga;
+}
+
+div.empat {
+  grid-area: empat;
+}
+
+.container-sosmed .box-sosmed a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.container-sosmed .box-sosmed {
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.container-sosmed .box-sosmed:hover {
+  background-color: green;
+  color: white;
+  transform: scale(2.5);
+}
+
+/* Projec CSS */
+
+.project {
+  display: grid;
+  row-gap: 20px;
+}
+
+.project .box-project {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+
+  display: grid;
+  grid-template-columns: 100px minmax(400px, 1fr);
+  grid-template-rows: 100px;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.project .box-project a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  line-height: 100px;
+  color: white;
+  font-size: 20px;
+}
+
+.project .box-project h2 {
+  padding: 0 30px;
+  font-size: 20px;
+  font-weight: 100;
+  font-size: 25px;
+}
+
+.project .box-project .box-img-project {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(0, 132, 255);
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.project .box-project:hover {
+  background-color: rgb(82, 82, 219);
+  color: white;
+  transition: 0.5s;
+  animation: open-page 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes open-page {
+  0% {
+    width: 100px;
+  }
+  100% {
+    width: 97%;
+  }
+}
+
+@keyframes blur {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Footer Css */
+
+footer {
+  background-color: rgb(82, 82, 219);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  grid-area: footer;
+}
+
+@media screen and (max-width: 1000px) {
+  header {
+    grid-template-columns: 1fr;
+  }
+
+  header nav {
+    grid-template-rows: 34px;
+  }
+
+  .home {
+    grid-template-columns: 1fr;
+  }
+
+  sidebar .box-iklan {
+    width: 25%;
+  }
+
+  .container-sosmed {
+    grid-template-columns: repeat(1, 100px);
+    grid-template-rows: repeat(4, 100px);
+    grid-template-areas:
+      "satu"
+      "dua"
+      "tiga"
+      "empat";
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    grid-template-columns: 0.9fr 0.1fr;
+    grid-template-rows: 1fr;
+    padding-bottom: 10px;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  header .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 80%;
+    background-color: rgb(125, 138, 255);
+    padding: 40px 5px;
+    z-index: 9999;
+
+    display: none;
+    grid-template-columns: 95%;
+    grid-template-rows: 10px repeat(auto-fit, 50px);
+
+    animation: menu 1s forwards;
+    justify-content: center;
+  }
+
+  header .menu .back {
+    color: black;
+    font-size: 30px;
+    position: relative;
+    left: 350px;
+    bottom: 30px;
+    cursor: pointer;
+  }
+
+  header .menu .back:hover {
+    opacity: 0.5;
+  }
+
+  @keyframes menu {
+    from {
+      width: 0px;
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+      width: 80%;
+    }
+  }
+
+  header .menu a {
+    color: rgb(51, 51, 51);
+    border-bottom: 1px solid rgb(104, 104, 104);
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header .menu a:last-child{
+    border-bottom: none;
+  }
+
+  header .menu a:hover {
+    background-color: #fff;
+    color: rgb(44, 44, 219);
+  }
+
+  header img {
+    display: flex;
+    margin: auto;
+    cursor: pointer;
+  }
+
+  .conten .conten-box-iklan {
+    height: 200px;
+  }
+
+  .box-biodata {
+    height: 500px;
+    animation: open-page-biodata 1s;
+    text-align: center;
+  }
+
+  @keyframes open-page-biodata {
+    0% {
+      height: 0px;
+      width: 0px;
+    }
+    50% {
+      width: 400px;
+      height: 0px;
+    }
+    100% {
+      width: 400px;
+      height: 500px;
+    }
+  }
+}

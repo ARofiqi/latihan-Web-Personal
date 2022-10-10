@@ -1,0 +1,85 @@
+.container-weekly-blog {
+  margin-top: 20px;
+  background-color: rgb(39, 39, 230);
+  grid-gap: 10px;
+  padding: 40px 20px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
+  justify-content: center;
+}
+
+.container-weekly-blog .link-box-blog {
+  background-color: rgb(141, 141, 141);
+  height: 300px;
+
+  display: grid;
+  grid-template-rows: 30px 100px auto 30px;
+  grid-template-areas:
+    "j"
+    "g"
+    "t"
+    "btn";
+
+  text-align: center;
+  justify-content: center;
+}
+
+.container-weekly-blog .logo-weekly-blog {
+  background-color: black;
+  color: white;
+  height: 50px;
+  width: 150px;
+  border-radius: 25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  left: 44.5%;
+  top: 85px;
+  font-size: 20px;
+}
+
+.container-weekly-blog .link-box-blog h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  grid-area: j;
+}
+
+.container-weekly-blog .link-box-blog .link-box-blog-img {
+  background-color: white;
+  height: 100px;
+
+  grid-area: g;
+}
+
+.container-weekly-blog .link-box-blog p {
+  width: 200px;
+  grid-area: t;
+}
+
+.container-weekly-blog .link-box-blog .btn-enter-blog {
+  width: 100px;
+  height: 20px;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  font-weight: 400px;
+  cursor: pointer;
+
+  grid-area: btn;
+}
+
+.container-weekly-blog .link-box-blog .btn-enter-blog a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container-weekly-blog .link-box-blog .btn-enter-blog:hover {
+  background-color: white;
+  color: rgb(0, 0, 0);
+}

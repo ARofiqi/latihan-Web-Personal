@@ -1,0 +1,210 @@
+.container-rumus {
+  background-color: rgb(66, 66, 255);
+  height: 800px;
+  margin: 50px 0;
+  border-radius: 5px;
+  box-shadow: 1p 1p 5px rgb(0, 0, 0);
+}
+
+.logo-rumus {
+  background-color: black;
+  color: white;
+  height: 40px;
+  width: 200px;
+  font-size: 30px;
+  border-radius: 20px;
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+
+  position: absolute;
+  top: 120px;
+  left: 50px;
+}
+
+.nav-rumus {
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
+}
+
+.nav-rumus div {
+  background-color: gray;
+  color: rgb(0, 0, 0);
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 10px;
+  margin: 20px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px;
+}
+
+.nav-rumus div:hover {
+  background-color: rgb(59, 59, 59);
+  color: rgb(255, 255, 255);
+}
+
+.box-rumus {
+  background-color: rgb(197, 197, 197);
+}
+
+.persegi-panjang-rumus, .segitiga-rumus {
+  background-color: yellow;
+  width: 500px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px gray;
+  padding: 20px 5px;
+
+  display: flex;
+  flex-direction: column;
+
+  position: fixed;
+  left: 400px;
+
+  animation: box-rumus 1s forwards;
+}
+
+@keyframes box-rumus {
+  from {
+    top: 50px;
+    opacity: .5;
+  }
+  to {
+    top: 100px;
+    opacity: 1;
+  }
+}
+
+.keliling {
+  background-color: rgb(36, 36, 36);
+  border-radius: 5px;
+  margin: 5px 10px;
+  color: white;
+
+  display: grid;
+  grid-template-rows: 50px 20px 100px;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+
+  grid-template-areas:
+    "j j j"
+    "r r r"
+    "p l h";
+}
+
+.keliling h2 {
+  grid-area: j;
+}
+
+.keliling h3 {
+  grid-area: r;
+}
+
+.keliling .p {
+  grid-area: p;
+}
+
+.keliling .l {
+  grid-area: l;
+}
+
+.keliling .hasil {
+  background-color: #fff;
+  color: gray;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  overflow: auto;
+
+  grid-area: h;
+}
+
+.box-input {
+  background-color: #fff;
+  color: gray;
+  width: 100px;
+  height: 30px;
+  font-size: 18px;
+  border-radius: 5px;
+  text-align: center;
+  border: 1px solid gray;
+}
+
+.luas {
+  background-color: rgb(36, 36, 36);
+  border-radius: 5px;
+  margin: 10px;
+  color: white;
+
+  display: grid;
+  grid-template-rows: 50px 20px 100px;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+
+  grid-template-areas:
+    "j j j"
+    "r r r"
+    "p l h";
+}
+
+.luas h2 {
+  grid-area: j;
+}
+
+.luas h3 {
+  grid-area: r;
+}
+
+.luas .p {
+  grid-area: p;
+}
+
+.luas .l {
+  grid-area: l;
+}
+
+.luas .hasil {
+  background-color: #fff;
+  color: gray;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  overflow: auto;
+
+  grid-area: h;
+}
+
+.hidden {
+  display: none;
+}
+
+.back {
+  height: 20px;
+  background-color: rgb(54, 54, 54);
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  margin: 10px auto;
+  margin-top: 0px;
+  width: 200px;
+}
+
+.back:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(54, 54, 54);
+}
